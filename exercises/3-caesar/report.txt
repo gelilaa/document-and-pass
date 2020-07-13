@@ -1,27 +1,21 @@
 Started
-.F..F..F..F..F..F..F.
+....F..F..F.....F..F.
 
 Failures:
-1) caesar works with single letters
-.    Expected undefined to equal 'B'..
+1) caesar works with words
+.    Expected 'BBB' to equal 'Bbb'..
 
-2) caesar works with words
-.    Expected undefined to equal 'Bbb'..
+2) caesar works with phrases
+.    Expected 'MJQQT, BTWQI!' to equal 'Mjqqt, Btwqi!'..
 
-3) caesar works with phrases
-.    Expected undefined to equal 'Mjqqt, Btwqi!'..
+3) caesar works with negative shift
+.    Expected 'HELLO, =ORLD!' to equal 'Hello, World!'..
 
-4) caesar works with negative shift
-.    Expected undefined to equal 'Hello, World!'..
+4) caesar works with large shift factors
+.    Expected 'EBIIL, TLOIA!' to equal 'Ebiil, Tloia!'..
 
-5) caesar wraps
-.    Expected undefined to equal 'A'..
+5) caesar works with large negative shift factors
+.    Expected '+(//2, :25/A!' to equal 'Ebiil, Tloia!'..
 
-6) caesar works with large shift factors
-.    Expected undefined to equal 'Ebiil, Tloia!'..
-
-7) caesar works with large negative shift factors
-.    Expected undefined to equal 'Ebiil, Tloia!'..
-
-7 specs, 7 failures
-Finished in 0.007 seconds
+7 specs, 5 failures
+Finished in 0.005 seconds
