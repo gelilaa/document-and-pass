@@ -1,5 +1,7 @@
-/**
- *
+/**determines the oldest person 
+ *@param {object} given persons 
+ * @returns{object} return the oldest person living 
+ * 
  */
 let findTheOldest = function (people) {  
     let now = new Date;
@@ -12,3 +14,9 @@ let findTheOldest = function (people) {
 }
 
 module.exports = findTheOldest;
+
+ 
+   
+
+      
+  
