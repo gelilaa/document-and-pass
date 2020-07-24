@@ -3,7 +3,7 @@
 <!-- END TITLE -->
 
 <!-- BEGIN TOC -->
-> 7/9/2020, 12:31:24 PM
+> 7/13/2020, 1:47:15 PM
 
 - [0-hello-world](#0-hello-world)
 - [1-remove-from-array](#1-remove-from-array)
@@ -49,7 +49,7 @@ Started
 
 
 2 specs, 0 failures
-Finished in 0.009 seconds
+Finished in 0.007 seconds
 
 ```
 
@@ -207,43 +207,29 @@ Finished in 0.005 seconds
 
 <a name="fibonacci"></a>
 
-## fibonacci()
+## fibonacci(num) ⇒ <code>number</code>
+Fibonacci Series are list of numbers where everyone’s number is the sum of the previous consecutive numbers.
 
+
+**Returns**: <code>number</code> - value of the fibonacci sequence.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| num | <code>number</code> | initial fibonacci number |
+
+**Example**  
+```js
+fibonacci(4) // returns the 4th member of the series: 3  (1, 1, 2, 3)
+   fibonacci(6) // returns 8
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F..F..F.
+...........................
 
-Failures:
-1) fibonacci works
-.    Expected undefined to equal 3..
 
-2) fibonacci works
-.    Expected undefined to equal 8..
-
-3) fibonacci works
-.    Expected undefined to equal 55..
-
-4) fibonacci works
-.    Expected undefined to equal 610..
-
-5) fibonacci works
-.    Expected undefined to equal 75025..
-
-6) fibonacci doesn't accept negatives
-.    Expected undefined to equal 'OOPS'..
-
-7) fibonacci DOES accept strings
-.    Expected undefined to equal 1..
-
-8) fibonacci DOES accept strings
-.    Expected undefined to equal 1..
-
-9) fibonacci DOES accept strings
-.    Expected undefined to equal 21..
-
-9 specs, 9 failures
-Finished in 0.01 seconds
+9 specs, 0 failures
+Finished in 0.006 seconds
 
 ```
 
@@ -256,19 +242,28 @@ Finished in 0.01 seconds
 
 <a name="getTheTitles"></a>
 
-## getTheTitles()
+## getTheTitles(arrays) ⇒
+filters the title of the book
 
+
+**Returns**: arrays of titles  
+
+| Param | Description |
+| --- | --- |
+| arrays | of indexes for title and author |
+
+**Example**  
+```js
+getTheTitles(books) // ['Book','Book2']
+```
 **Test Report**
 ```
 Started
-.F.
+...
 
-Failures:
-1) getTheTitles gets titles
-.    Expected undefined to equal [ 'Book', 'Book2' ]..
 
-1 spec, 1 failure
-Finished in 0.002 seconds
+1 spec, 0 failures
+Finished in 0 seconds
 
 ```
 
@@ -281,34 +276,24 @@ Finished in 0.002 seconds
 
 <a name="leapYears"></a>
 
-## leapYears()
+## leapYears(year)
+leap years are divisible by 4 and 400 and not divisible by 100
+
+
+**Returns{**: boolean} returns true if the year is leap year.Else returns false  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| year | <code>number</code> | the initial given year |
 
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F.
+..................
 
-Failures:
-1) leapYears works with non century years
-.    Expected undefined to equal true..
 
-2) leapYears works with non century years
-.    Expected undefined to equal false..
-
-3) leapYears works with ridiculously futuristic non century years
-.    Expected undefined to equal true..
-
-4) leapYears works with century years
-.    Expected undefined to equal false..
-
-5) leapYears works with century years
-.    Expected undefined to equal true..
-
-6) leapYears works with century years
-.    Expected undefined to equal false..
-
-6 specs, 6 failures
-Finished in 0.006 seconds
+6 specs, 0 failures
+Finished in 0.004 seconds
 
 ```
 
@@ -321,31 +306,29 @@ Finished in 0.006 seconds
 
 <a name="palindromes"></a>
 
-## palindromes()
+## palindromes(a) ⇒ <code>boolean</code>
+determines whether or not a given string is a palindrome
 
+
+**Returns**: <code>boolean</code> - returns true if the text is palindrome.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| a | <code>string</code> | given string |
+
+**Example**  
+```js
+palindromes('racecar') // true
+palindromes('tacos') // false
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F.
+...............
 
-Failures:
-1) palindromes works with single words
-.    Expected undefined to equal true..
 
-2) palindromes works with punctuation
-.    Expected undefined to equal true..
-
-3) palindromes works with multiple words
-.    Expected undefined to equal true..
-
-4) palindromes works with multiple words
-.    Expected undefined to equal true..
-
-5) palindromes doesn't just always return true
-.    Expected undefined to equal false..
-
-5 specs, 5 failures
-Finished in 0.005 seconds
+5 specs, 0 failures
+Finished in 0.004 seconds
 
 ```
 
@@ -363,32 +346,26 @@ Finished in 0.005 seconds
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F.
+....F..F..F.....F..F.
 
 Failures:
-1) caesar works with single letters
-.    Expected undefined to equal 'B'..
+1) caesar works with words
+.    Expected 'BBB' to equal 'Bbb'..
 
-2) caesar works with words
-.    Expected undefined to equal 'Bbb'..
+2) caesar works with phrases
+.    Expected 'MJQQT, BTWQI!' to equal 'Mjqqt, Btwqi!'..
 
-3) caesar works with phrases
-.    Expected undefined to equal 'Mjqqt, Btwqi!'..
+3) caesar works with negative shift
+.    Expected 'HELLO, =ORLD!' to equal 'Hello, World!'..
 
-4) caesar works with negative shift
-.    Expected undefined to equal 'Hello, World!'..
+4) caesar works with large shift factors
+.    Expected 'EBIIL, TLOIA!' to equal 'Ebiil, Tloia!'..
 
-5) caesar wraps
-.    Expected undefined to equal 'A'..
+5) caesar works with large negative shift factors
+.    Expected '+(//2, :25/A!' to equal 'Ebiil, Tloia!'..
 
-6) caesar works with large shift factors
-.    Expected undefined to equal 'Ebiil, Tloia!'..
-
-7) caesar works with large negative shift factors
-.    Expected undefined to equal 'Ebiil, Tloia!'..
-
-7 specs, 7 failures
-Finished in 0.007 seconds
+7 specs, 5 failures
+Finished in 0.005 seconds
 
 ```
 
@@ -406,19 +383,10 @@ Finished in 0.007 seconds
 **Test Report**
 ```
 Started
-.F..F..F.
+.........
 
-Failures:
-1) findTheOldest finds the oldest person!
-.    TypeError: Cannot read property 'name' of undefined.
 
-2) findTheOldest finds the oldest person if someone is still living
-.    TypeError: Cannot read property 'name' of undefined.
-
-3) findTheOldest finds the oldest person if the OLDEST is still living
-.    TypeError: Cannot read property 'name' of undefined.
-
-3 specs, 3 failures
+3 specs, 0 failures
 Finished in 0.004 seconds
 
 ```
@@ -468,7 +436,7 @@ Failures:
 .    Expected undefined to equal 'ethay ickquay ownbray oxfay'..
 
 9 specs, 9 failures
-Finished in 0.007 seconds
+Finished in 0.009 seconds
 
 ```
 
